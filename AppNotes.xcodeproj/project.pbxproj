@@ -14,6 +14,8 @@
 		559EEECC2A25ACC6001F54FF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559EEECB2A25ACC6001F54FF /* Persistence.swift */; };
 		559EEECF2A25ACC6001F54FF /* AppNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 559EEECD2A25ACC6001F54FF /* AppNotes.xcdatamodeld */; };
 		559EEEDA2A25B1F4001F54FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559EEED92A25B1F4001F54FF /* ViewModel.swift */; };
+		55A5B9EC2A3A336F00AE9703 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5B9EB2A3A336F00AE9703 /* Home.swift */; };
+		55A5B9EE2A3A338E00AE9703 /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5B9ED2A3A338E00AE9703 /* CreateNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		559EEECB2A25ACC6001F54FF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		559EEECE2A25ACC6001F54FF /* AppNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppNotes.xcdatamodel; sourceTree = "<group>"; };
 		559EEED92A25B1F4001F54FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		55A5B9EB2A3A336F00AE9703 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		55A5B9ED2A3A338E00AE9703 /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		559EEED52A25B16B001F54FF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55A5B9EB2A3A336F00AE9703 /* Home.swift */,
+				55A5B9ED2A3A338E00AE9703 /* CreateNote.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 				559EEEDA2A25B1F4001F54FF /* ViewModel.swift in Sources */,
 				559EEECC2A25ACC6001F54FF /* Persistence.swift in Sources */,
 				559EEEC52A25ACC5001F54FF /* ContentView.swift in Sources */,
+				55A5B9EE2A3A338E00AE9703 /* CreateNote.swift in Sources */,
 				559EEEC32A25ACC5001F54FF /* AppNotesApp.swift in Sources */,
+				55A5B9EC2A3A336F00AE9703 /* Home.swift in Sources */,
 				559EEECF2A25ACC6001F54FF /* AppNotes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
