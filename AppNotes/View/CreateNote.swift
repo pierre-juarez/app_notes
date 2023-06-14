@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateNote: View {
     
     @ObservedObject var model: ViewModel
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack{
@@ -22,7 +23,7 @@ struct CreateNote: View {
             DatePicker("Seleccione fecha", selection: $model.createdAt)
             Spacer()
             Button {
-                
+                model.saveData(context: context)
             } label: {
                 Label {
                     Text("Guardar").foregroundColor(.white).bold()
