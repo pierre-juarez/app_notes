@@ -30,4 +30,14 @@ class ViewModel: ObservableObject {
         
     }
     
+    func deleteData(item: Notes, context: NSManagedObjectContext){
+        context.delete(item)
+        do {
+            try context.save()
+            print("Se eliminó correctamente!")
+        } catch let error as NSError {
+            print("Error al eliminar: \(error.localizedDescription)")
+        }
+    }
+    
 }

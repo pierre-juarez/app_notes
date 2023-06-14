@@ -11,6 +11,7 @@ struct Home: View {
     
     @StateObject var model = ViewModel()
     @FetchRequest(entity: Notes.entity(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)], animation: .spring()) var results: FetchedResults<Notes>
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         
@@ -23,7 +24,26 @@ struct Home: View {
                             .font(.title)
                             .bold()
                         Text(item.createdAt ?? Date(), style: .date)
-                    }
+                    }.contextMenu(ContextMenu(menuItems: {
+                        Button {
+                            print("Editar...")
+                        } label: {
+                            Label {
+                                Text("Editar")
+                            } icon: {
+                                Image(systemName: "pencil")
+                            }
+                        }
+                        Button {
+                            model.deleteData(item: item, context: context)
+                        } label: {
+                            Label {
+                                Text("Eliminar")
+                            } icon: {
+                                Image(systemName: "trash")
+                            }
+                        }
+                    }))
                 }
                 
             }.navigationTitle("Lista de Notas")
