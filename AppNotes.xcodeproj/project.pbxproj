@@ -13,6 +13,7 @@
 		559EEECA2A25ACC6001F54FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559EEEC92A25ACC6001F54FF /* Preview Assets.xcassets */; };
 		559EEECC2A25ACC6001F54FF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559EEECB2A25ACC6001F54FF /* Persistence.swift */; };
 		559EEECF2A25ACC6001F54FF /* AppNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 559EEECD2A25ACC6001F54FF /* AppNotes.xcdatamodeld */; };
+		559EEEDA2A25B1F4001F54FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559EEED92A25B1F4001F54FF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		559EEEC92A25ACC6001F54FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		559EEECB2A25ACC6001F54FF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		559EEECE2A25ACC6001F54FF /* AppNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppNotes.xcdatamodel; sourceTree = "<group>"; };
+		559EEED92A25B1F4001F54FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,8 @@
 		559EEEC12A25ACC5001F54FF /* AppNotes */ = {
 			isa = PBXGroup;
 			children = (
+				559EEED62A25B174001F54FF /* ViewModel */,
+				559EEED52A25B16B001F54FF /* View */,
 				559EEEC22A25ACC5001F54FF /* AppNotesApp.swift */,
 				559EEEC42A25ACC5001F54FF /* ContentView.swift */,
 				559EEEC62A25ACC6001F54FF /* Assets.xcassets */,
@@ -71,6 +75,21 @@
 				559EEEC92A25ACC6001F54FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		559EEED52A25B16B001F54FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		559EEED62A25B174001F54FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				559EEED92A25B1F4001F54FF /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559EEEDA2A25B1F4001F54FF /* ViewModel.swift in Sources */,
 				559EEECC2A25ACC6001F54FF /* Persistence.swift in Sources */,
 				559EEEC52A25ACC5001F54FF /* ContentView.swift in Sources */,
 				559EEEC32A25ACC5001F54FF /* AppNotesApp.swift in Sources */,
