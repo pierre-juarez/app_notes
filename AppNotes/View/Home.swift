@@ -10,21 +10,35 @@ import SwiftUI
 struct Home: View {
     
     @StateObject var model = ViewModel()
+    @FetchRequest(entity: Notes.entity(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)], animation: .spring()) var results: FetchedResults<Notes>
     
     var body: some View {
-        Button {
-            model.show.toggle()
-        } label: {
-            Text("+ Nueva nota")
-        }.sheet(isPresented: $model.show) {
-            CreateNote(model: model)
+        
+        NavigationView {
+            List{
+                
+                ForEach(results){ item in
+                    VStack(alignment: .leading){
+                        Text(item.notes ?? "Sin nota")
+                            .font(.title)
+                            .bold()
+                        Text(item.createdAt ?? Date(), style: .date)
+                    }
+                }
+                
+            }.navigationTitle("Lista de Notas")
+                .navigationBarItems(trailing: Button(action: {
+                    model.show.toggle()
+                }, label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(.blue)
+                        .font(.title)
+                }))
+                .sheet(isPresented: $model.show) {
+                    CreateNote(model: model)
+                }
         }
 
     }
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
