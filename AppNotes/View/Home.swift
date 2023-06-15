@@ -10,8 +10,10 @@ import SwiftUI
 struct Home: View {
     
     @StateObject var model = ViewModel()
-    @FetchRequest(entity: Notes.entity(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)], animation: .spring()) var results: FetchedResults<Notes>
+//    @FetchRequest(entity: Notes.entity(), sortDescriptors: [NSSortDescriptor(key: "createdAt", ascending: true)], animation: .spring()) var results: FetchedResults<Notes>
     @Environment(\.managedObjectContext) var context
+    
+    @FetchRequest(entity: Notes.entity(), sortDescriptors: [], predicate: NSPredicate(format: "notes BEGINSWITH 'IMPORTANTE'", Date() as CVarArg), animation: .spring()) var results: FetchedResults<Notes>
     
     var body: some View {
         
