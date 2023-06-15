@@ -14,6 +14,7 @@ class ViewModel: ObservableObject {
     @Published var nota = ""
     @Published var createdAt = Date()
     @Published var show = false
+    @Published var updateItem : Notes!
     
     func saveData(context: NSManagedObjectContext){
         let newNote = Notes(context: context)
@@ -37,6 +38,26 @@ class ViewModel: ObservableObject {
             print("Se eliminó correctamente!")
         } catch let error as NSError {
             print("Error al eliminar: \(error.localizedDescription)")
+        }
+    }
+    
+    func sendData(item: Notes){
+        updateItem = item
+        nota = item.notes ?? ""
+        createdAt = item.createdAt ?? Date()
+        show.toggle()
+        
+    }
+    
+    func editData(context: NSManagedObjectContext){
+        updateItem.createdAt = createdAt
+        updateItem.notes = nota
+        do {
+            try context.save()
+            print("Nota editada correctamente!")
+            show.toggle()
+        } catch let error as NSError {
+            print("Error al editar: \(error.localizedDescription)")
         }
     }
     
